@@ -16,7 +16,7 @@ const Profile = async () => {
         <h1 className="text-2xl text-gray-800 font-semibold">
           Welcome to your profile!
         </h1>
-        <div className="flex justify-center items-center overflow-hidden rounded-full mt-4">
+        {/* <div className="flex justify-center items-center overflow-hidden rounded-full mt-4">
           {user?.picture ? (
             <img
               className="w-40 h-40 rounded-full"
@@ -34,7 +34,7 @@ const Profile = async () => {
             {user?.family_name || 'No Name'}
           </h4>
           <p className="text-gray-800">{user?.email}</p>
-        </div>
+        </div> */}
         <div
           className="flex justify-between gap-4  
         ">

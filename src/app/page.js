@@ -35,7 +35,7 @@ export default async function Home() {
             <p className="text-gray-700 ">
               {' '}
               {post.body.length > 100
-                ? post.body.slice(0, 100) + '...'
+                ? post.body.slice(0, 50) + '...'
                 : post.body}
             </p>
 

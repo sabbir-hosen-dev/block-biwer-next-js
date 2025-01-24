@@ -1,10 +1,10 @@
 import Link from 'next/link';
-// import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
+import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 
-const Navbar = () => {
-  // const { getUser } = getKindeServerSession();
-  // const user = await getUser();
-  // console.log(user);
+const Navbar = async () => {
+  const { getUser } = getKindeServerSession();
+
+  const user = await getUser();
 
   return (
     <nav className="bg-gray-800 text-white p-4 flex justify-between items-center">
@@ -19,16 +19,26 @@ const Navbar = () => {
           Profile
         </Link>
 
-        <Link
-          href="/api/auth/login"
-          className="bg-green-500 px-4 py-2 rounded-md hover:bg-green-600 transition">
-          Login
-        </Link>
-        <Link
-          href="/api/auth/register"
-          className="bg-green-500 px-4 py-2 rounded-md hover:bg-green-600 transition">
-          Sign In
-        </Link>
+        {user ? (
+          <Link
+            href="/api/auth/logout"
+            className="bg-slate-700  px-4 py-2 rounded-md hover:bg-red-600 transition">
+            Log Out
+          </Link>
+        ) : (
+          <>
+            <Link
+              href="/api/auth/login"
+              className="bg-green-500 px-4 py-2 rounded-md hover:bg-green-600 transition">
+              Login
+            </Link>
+            <Link
+              href="/api/auth/register"
+              className="bg-green-500 px-4 py-2 rounded-md hover:bg-green-600 transition">
+              Sign In
+            </Link>
+          </>
+        )}
       </div>
     </nav>
   );

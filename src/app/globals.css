@@ -19,3 +19,6 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+.wrap {
+  @apply max-w-[1500px] mx-auto px-5;
+}

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="  bg-gray-800 text-white py-6">
+    <footer className="  bg-[#2e3443] text-white py-6">
       <div className="wrap px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between flex-wrap gap-6 text-center md:text-left">
           {/* About Section */}

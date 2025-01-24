@@ -7,7 +7,7 @@ const Navbar = async () => {
   const user = await getUser();
 
   return (
-    <nav className="bg-gray-800 text-white pt-2 ">
+    <nav className="bg-[#38425a] text-white pt-2 ">
       <div className="wrap p-4 flex justify-between items-center">
         <Link href="/" className="text-xl font-bold">
           BlogView

@@ -5,8 +5,8 @@ export default async function Profile() {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
 
-  if (!user || !user.email) {
-    redirect('/api/auth/login');
+  if (!user) {
+    return redirect('/api/auth/login');
   } else {
     return (
       <div className="flex justify-center items-center min-h-screen bg-gray-100 p-6">

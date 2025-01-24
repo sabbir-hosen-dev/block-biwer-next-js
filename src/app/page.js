@@ -19,12 +19,12 @@ export default async function Home() {
   }
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="wrap p-6">
       <h1 className="text-3xl font-bold text-center mb-6">Latest Blog Posts</h1>
 
       {/* Grid Layout */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {posts.slice(0, 10).map(post => (
+        {posts.slice(0, 9).map(post => (
           <div
             key={post.id}
             className="bg-white flex flex-col justify-between shadow-lg rounded-lg p-6 hover:shadow-xl transition duration-300">

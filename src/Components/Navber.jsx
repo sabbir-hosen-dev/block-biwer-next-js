@@ -8,7 +8,7 @@ const Navbar = async () => {
 
   return (
     <nav className="bg-[#38425a] text-white pt-2 ">
-      <div className="wrap p-4 flex justify-between items-center">
+      <div className="wrap p-4 pt-5 flex justify-between items-center">
         <Link href="/" className="text-xl font-bold">
           BlogView
         </Link>

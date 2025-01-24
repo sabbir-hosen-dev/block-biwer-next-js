@@ -7,15 +7,14 @@ export default async function Profile() {
 
   if (!user) {
     return redirect('/api/auth/login');
-  } else {
-    return (
-      <div className="flex justify-center items-center min-h-screen bg-gray-100 p-6">
-        <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
-          <h1 className="text-2xl text-gray-800 font-semibold">
-            Welcome to your profile, {user?.email}!
-          </h1>
-        </div>
-      </div>
-    );
   }
+  return (
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-6">
+      <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">
+        <h1 className="text-2xl text-gray-800 font-semibold">
+          Welcome to your profile, {user?.email}!
+        </h1>
+      </div>
+    </div>
+  );
 }

@@ -3,8 +3,8 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <footer className="  bg-gray-800 text-white py-6">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-center md:text-left">
+      <div className="wrap px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between flex-wrap gap-6 text-center md:text-left">
           {/* About Section */}
           <div>
             <h2 className="text-xl font-bold">BlogView</h2>
